@@ -1,0 +1,20 @@
+@import "normalize.css";
+
+:root {
+  --primary: ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  text-rendering: optimizeSpeed;
+}
