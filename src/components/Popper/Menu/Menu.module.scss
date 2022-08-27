@@ -1,0 +1,42 @@
+//Menu.js
+.setting-items {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(44px);
+}
+.item {
+  width: 100%;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: currentColor;
+  border-radius: 0;
+  font-weight: var(--text-font-weight);
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.05);
+  }
+  &.divider {
+    border-top: 1px solid var(--minimum-dark-color);
+  }
+}
+//Heading.js
+.heading {
+  position: relative;
+  height: 44px;
+  min-width: 200px;
+  width: 100%;
+}
+.back-btn {
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+  &:hover {
+    background-color: var(--light-grey-hover-color);
+    border-radius: 0% 50% 50% 0%;
+  }
+}
+.heading-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

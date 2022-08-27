@@ -1,7 +1,28 @@
 @import "normalize.css";
 
 :root {
-  --primary: ;
+  --primary-text-color: #333;
+  --vice-text-color: #fff;
+
+  --light-standard-color: #fff;
+
+  --first-vice-color: rgb(37 244 238);
+
+  --second-vice-color: rgb(254 44 85);
+  --dark-second-vice-color: rgb(235, 40, 79);
+  --light-second-vice-color: rgba(254, 44, 85, 0.03);
+
+  --darkest-color: rgba(22, 24, 35, 1);
+  --dark-color: rgba(22, 24, 35, 0.34);
+  --minimum-dark-color: rgb(200, 200, 200);
+
+  --dark-shadow-color: 0px 1px 18px rgb(0 0 0 / 12%);
+  --light-grey-hover-color: rgba(22, 24, 35, 0.05);
+
+  --title-font-weight: 700;
+  --text-font-weight: 600;
+
+  --transition-props: all 0.2s ease-in;
 }
 
 * {
@@ -12,6 +33,7 @@
 
 html {
   font-size: 62.5%;
+  overflow: hidden;
 }
 
 body {
@@ -19,4 +41,34 @@ body {
   line-height: 1.5;
   font-size: 1.6rem;
   text-rendering: optimizeSpeed;
+  color: var(--primary-text-color);
+}
+button,
+input,
+[tabindex] {
+  outline: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-props);
+  background-color: transparent;
+}
+a[href] {
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  // color: var(--primary-text-color);
+}
+
+//Customize Tippy tooltip
+body {
+  .tippy-box {
+    // background-color: var(--dark-color);
+    padding: 4px;
+    border-radius: 8px;
+    opacity: 0.9;
+    // font-size: 1.6rem;
+  }
 }
