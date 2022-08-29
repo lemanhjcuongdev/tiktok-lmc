@@ -130,17 +130,36 @@
 .actions {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.msg-btn {
+.msg-btn,
+.noti-btn {
+  display: flex;
   font-size: 2.6rem;
-  color: var(--darkest-color);
+  color: var(--medium-dark-color);
   padding: 4px 12px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .user-avt {
   cursor: pointer;
   width: 41px;
   object-fit: cover;
   border-radius: 50%;
+}
+//badge noti
+.noti {
+  position: absolute;
+  transform: translate(10px, -10px);
+  font-weight: 600;
+  font-size: 1.6rem;
+  background-color: var(--second-vice-color);
+  color: var(--vice-text-color);
+  padding: 2px 7px;
+  border-radius: 999px;
+  margin-right: 10px;
 }
 
 .more-settings {

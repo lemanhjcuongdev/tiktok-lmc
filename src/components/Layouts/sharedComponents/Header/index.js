@@ -22,11 +22,13 @@ import {
   faUser,
   faCircleDollarToSlot,
   faGear,
+  faBell,
 } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper as PopperWrapper } from "~/components/Popper";
 import AccountItem from "~/components/AccountItem";
 import Button from "~/components/Button";
 import Menu from "~/components/Popper/Menu";
+import ImgComponent from "~/components/ImgComponent";
 
 const cx = classNames.bind(styles); //use "-" in css without syntax classNames javascript error
 
@@ -81,6 +83,10 @@ function Header() {
   //CHECK LOGIN STATUS
   const isSignedIn = true;
 
+  //MESS, NOTI COUNTER
+  // const haveMsg = 0;
+  // const haveNoti = 0;
+
   useEffect(() => {
     setTimeout(() => {
       setsearchResult([]);
@@ -128,11 +134,18 @@ function Header() {
                 <Button border_style left_icon={<FontAwesomeIcon icon={faPlus} />}>
                   Upload
                 </Button>
-                {/* <Tippy delay={200} content="Message" placement="bottom">
+                <Tippy delay={200} content="Message" placement="bottom">
                   <button className={cx("msg-btn")}>
                     <FontAwesomeIcon icon={faPaperPlane} />
+                    {/* <sup className={cx("noti")}>264</sup> */}
                   </button>
-                </Tippy> */}
+                </Tippy>
+                <Tippy delay={200} content="Notification" placement="bottom">
+                  <button className={cx("noti-btn")}>
+                    <FontAwesomeIcon icon={faBell} />
+                    {/* <sup className={cx("noti")}>186</sup> */}
+                  </button>
+                </Tippy>
               </>
             ) : (
               <>
@@ -144,10 +157,10 @@ function Header() {
             )}
             <Menu data={isSignedIn ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
               {isSignedIn ? (
-                <img
-                  src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/d427cb356d6b2d79005fde9f642f3d7a~c5_100x100.jpeg?x-expires=1661734800&x-signature=4uUihNPUzmGN3CkU7AtdidLzv5Y%3D"
+                <ImgComponent
+                  src="none"
                   className={cx("user-avt")}
-                  alt="Đào Lê Phương Hoa"
+                  // altImg="https://f8.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ff8_icon.fa5f0478.png&w=1920&q=75"
                 />
               ) : (
                 <button className={cx("settings")}>
