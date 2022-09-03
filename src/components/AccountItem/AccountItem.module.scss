@@ -2,6 +2,7 @@
   --first-vice-color: rgb(37 244 238);
 }
 .wrapper {
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 9px 16px;
@@ -17,9 +18,13 @@
   object-fit: cover;
 }
 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   flex: 1;
   margin-left: 12px;
   line-height: 1;
+  color: var(--primary-text-color);
 }
 .name {
   font-size: 1.6rem;

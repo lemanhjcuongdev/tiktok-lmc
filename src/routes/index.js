@@ -6,6 +6,7 @@ import Home from "~/pages/Home";
 import Following from "~/pages/Following";
 import Upload from "~/pages/Upload";
 import Search from "~/pages/Search";
+import Profile from "~/pages/Profile";
 
 //publicRoutes can be viewed without log in
 const publicRoutes = [
@@ -13,6 +14,7 @@ const publicRoutes = [
   { path: "/following", component: Following },
   { path: "/upload", component: Upload, layout: HeaderOnlyLayout },
   { path: "/search", component: Search, layout: null },
+  { path: "/@:nickname", component: Profile}
 ];
 
 const privateRoutes = [];
