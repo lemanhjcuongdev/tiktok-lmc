@@ -1,4 +1,4 @@
-import Header from "~/components/Layouts/sharedComponents/Header";
+import Header from "~/Layouts/sharedComponents/Header";
 
 function DefaultLayout({ children }) {
   return (

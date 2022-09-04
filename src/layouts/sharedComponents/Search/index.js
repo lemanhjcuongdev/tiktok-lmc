@@ -8,7 +8,7 @@ import { Wrapper as PopperWrapper } from "~/components/Popper";
 import AccountItem from "~/components/AccountItem";
 import styles from "./Search.module.scss";
 import { useDebounce } from "~/hooks";
-import * as searchServices from "~/apiServices/searchServices";
+import * as searchServices from "~/services/searchService";
 
 const cx = classNames.bind(styles);
 
@@ -47,6 +47,11 @@ function Search() {
   const handleInputUnfocus = () => {
     setinputFocus(false);
   };
+  const handleChange = (e) => {
+    const searchValue = e.target.value;
+    if (!searchValue.startsWith(" ")) setSearchValue(e.target.value);
+  };
+  const handleSubmit = () => {};
 
   return (
     <HeadlessTippy
@@ -80,9 +85,7 @@ function Search() {
           placeholder="Search accounts, videos, more and more... "
           spellCheck={false}
           value={searchValue}
-          onChange={(e) => {
-            setSearchValue(e.target.value);
-          }}
+          onChange={handleChange}
           onFocus={() => setinputFocus(true)}
         />
         {!!searchValue && !loading && (
@@ -92,7 +95,7 @@ function Search() {
         )}
         {loading && <FontAwesomeIcon className={cx("loading")} icon={faCircleNotch} />}
 
-        <button className={cx("search-btn")}>
+        <button className={cx("search-btn")} onMouseDown={(e) => e.preventDefault()}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
         {/* </form> */}

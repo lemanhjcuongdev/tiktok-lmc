@@ -12,6 +12,8 @@
 
   position: relative;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 .inner {
   // display: flex;
@@ -31,6 +33,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.logo-link {
+  display: flex;
 }
 .actions {
   width: 50%;

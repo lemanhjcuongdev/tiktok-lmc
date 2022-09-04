@@ -1,11 +1,14 @@
 //Menu.js
 .setting-items {
-  display: flex;
-  flex-direction: column;
   transform: translateX(44px);
 }
-.item {
+.body-items {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
   width: 100%;
+}
+.item {
   justify-content: flex-start;
   text-decoration: none;
   color: currentColor;
@@ -24,6 +27,7 @@
   height: 44px;
   min-width: 200px;
   width: 100%;
+  flex-shrink: 0;
 }
 .back-btn {
   width: 50px;

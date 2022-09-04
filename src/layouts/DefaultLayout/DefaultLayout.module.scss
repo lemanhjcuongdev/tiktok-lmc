@@ -7,7 +7,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("../../../assets/images/background.jpg");
+  background-image: url("../../assets/./images/background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   filter: blur(26px);
@@ -33,10 +33,14 @@
 }
 .navigation {
   width: 34%;
+  position: fixed;
 }
 .content {
+  position: absolute;
+  height: 2000px;
   width: 66%;
-  height: 100vh;
+  left: 34%;
+  // height: 100vh;
   // background-color: black;
   // opacity: 0.1;
 }

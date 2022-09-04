@@ -21,7 +21,8 @@ import {
 import Button from "~/components/Button";
 import Menu from "~/components/Popper/Menu";
 import ImgComponent from "~/components/ImgComponent";
-import Search from "~/components/Layouts/sharedComponents/Search";
+import Search from "~/Layouts/sharedComponents/Search";
+import config from "~/config";
 
 const cx = classNames.bind(styles); //use "-" in css without syntax classNames javascript error
 
@@ -56,6 +57,11 @@ const MENU_ITEMS = [
           type: "lang",
           code: "kr",
           label: "한국인",
+        },
+        {
+          type: "lang",
+          code: "fr",
+          label: "Français",
         },
       ],
     },
@@ -113,7 +119,7 @@ function Header() {
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
         <div className={cx("section-one")}>
-          <Link to="/">
+          <Link to={config.routerConfig.home} className={cx("logo-link")}>
             <img src={images.logo} height={50} alt="Tiktok" />
           </Link>
           <div className={cx("actions")}>

@@ -1,7 +1,8 @@
 //Layouts
-import { HeaderOnlyLayout } from "~/components/Layouts";
+import { HeaderOnlyLayout } from "~/layouts";
 
 //Components
+import config from "~/config";
 import Home from "~/pages/Home";
 import Following from "~/pages/Following";
 import Upload from "~/pages/Upload";
@@ -10,11 +11,11 @@ import Profile from "~/pages/Profile";
 
 //publicRoutes can be viewed without log in
 const publicRoutes = [
-  { path: "/", component: Home },
-  { path: "/following", component: Following },
-  { path: "/upload", component: Upload, layout: HeaderOnlyLayout },
-  { path: "/search", component: Search, layout: null },
-  { path: "/@:nickname", component: Profile}
+  { path: config.routerConfig.home, component: Home },
+  { path: config.routerConfig.following, component: Following },
+  { path: config.routerConfig.upload, component: Upload, layout: HeaderOnlyLayout },
+  { path: config.routerConfig.search, component: Search, layout: null },
+  { path: config.routerConfig.profile, component: Profile },
 ];
 
 const privateRoutes = [];
