@@ -30,6 +30,7 @@ function Search() {
       setLoading(true);
 
       const result = await searchServices.search(inputDebounced);
+      // setTimeout(() => setSearchResult([]), 10000);
       setSearchResult(result);
 
       setLoading(false);

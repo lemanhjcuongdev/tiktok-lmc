@@ -22,7 +22,6 @@ function Menu({ children, data, onChange }) {
           data={item}
           onClick={() => {
             if (isParent) {
-              // console.log(item.children);
               setHistory((prev) => [...prev, item.children]);
             } else {
               onChange(item);
@@ -32,6 +31,26 @@ function Menu({ children, data, onChange }) {
       );
     });
   };
+  const handleBack = () => {
+    setHistory((prev) => prev.slice(0, history.length - 1));
+  }
+
+  const renderResults = (attrs) => (
+    <div className={cx("setting-items")} tabIndex="-1" {...attrs}>
+      <PopperWrapper>
+        {history.length > 1 && (
+          <Heading
+            label={present.label} //need to optimize: don't hardcode
+            onBack={handleBack}
+          />
+        )}
+        <section className={cx("body-items")}>{renderItems()}</section>
+      </PopperWrapper>
+    </div>
+  );
+  const handleResetTab = () => {
+    setHistory((prev) => prev.slice(0, 1));
+  };
   return (
     <Tippy
       interactive
@@ -40,22 +59,8 @@ function Menu({ children, data, onChange }) {
       // visible
       placement="bottom-end"
       zIndex={1806}
-      render={(attrs) => (
-        <div className={cx("setting-items")} tabIndex="-1" {...attrs}>
-          <PopperWrapper>
-            {history.length > 1 && (
-              <Heading
-                label={present.label} //need to optimize: don't hardcode
-                onBack={() => {
-                  setHistory((prev) => prev.slice(0, history.length - 1));
-                }}
-              />
-            )}
-            <section className={cx("body-items")}>{renderItems()}</section>
-          </PopperWrapper>
-        </div>
-      )}
-      onHide={() => setHistory((prev) => prev.slice(0, 1))}
+      render={renderResults}
+      onHide={handleResetTab}
     >
       {children}
     </Tippy>
