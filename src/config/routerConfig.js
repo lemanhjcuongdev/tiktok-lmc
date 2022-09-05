@@ -4,5 +4,6 @@ const routerConfig = {
   upload: "/upload",
   search: "/search",
   profile: "/@:nickname",
-}
-export default routerConfig
+  live: "/live",
+};
+export default routerConfig;

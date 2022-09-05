@@ -23,7 +23,7 @@
   --title-font-weight: 700;
   --text-font-weight: 600;
 
-  --transition-props: all 0.2s ease-in;
+  --transition-props: all 0.2s ease-in-out;
 }
 
 //FONTS EMMBEDED
@@ -97,7 +97,7 @@ a[href] {
   text-decoration: none;
   border: none;
   text-align: center;
-  // color: var(--primary-text-color);
+  color: currentColor;
 }
 
 //Customize Tippy tooltip
