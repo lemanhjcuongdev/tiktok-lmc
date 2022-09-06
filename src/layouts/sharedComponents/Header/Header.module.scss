@@ -62,9 +62,9 @@
 .msg-btn,
 .noti-btn {
   display: flex;
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: var(--medium-dark-color);
-  padding: 4px 12px;
+  padding: 10px 12px;
 
   &:hover {
     opacity: 0.8;
@@ -72,21 +72,21 @@
 }
 .user-avt {
   cursor: pointer;
-  width: 41px;
+  width: 37px;
   object-fit: cover;
   border-radius: 50%;
 }
 //badge noti
 .noti {
   position: absolute;
-  transform: translate(10px, -10px);
+  transform: translate(0px, -10px);
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   background-color: var(--second-vice-color);
   color: var(--vice-text-color);
-  padding: 2px 7px;
+  padding: 1px 6px;
   border-radius: 999px;
-  margin-right: 10px;
+  // margin-right: 10px;
 }
 
 .more-settings {

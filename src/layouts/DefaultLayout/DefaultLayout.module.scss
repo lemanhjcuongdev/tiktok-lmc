@@ -8,7 +8,7 @@
   height: 100%;
   position: absolute;
   background-image: url("../../assets/./images/background.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100%;
   filter: blur(26px);
   animation: bg_spinner 120s linear infinite;
@@ -32,14 +32,15 @@
   z-index: 2;
 }
 .navigation {
-  width: 34%;
+  width: 26%;
   position: fixed;
 }
 .content {
   position: absolute;
   height: 2000px;
-  width: 66%;
-  left: 34%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   // height: 100vh;
   // background-color: black;
   // opacity: 0.1;

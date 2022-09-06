@@ -5,6 +5,7 @@ import { fa, faHouseUser, faUserGroup, faVideo } from "@fortawesome/free-solid-s
 import Menu, { MenuItem } from "./Menu";
 import styles from "./Sidebar.module.scss";
 import config from "~/config";
+import SuggestAccounts from "~/components/SuggestAccounts";
 
 const cx = classNames.bind(styles);
 
@@ -16,6 +17,8 @@ function Sidebar() {
         <MenuItem title="Following" to={config.routerConfig.following} icon={<FontAwesomeIcon icon={faUserGroup} />} />
         <MenuItem title="LIVE" to={config.routerConfig.live} icon={<FontAwesomeIcon icon={faVideo} />} />
       </Menu>
+      <SuggestAccounts label="Suggest accounts" />
+      <SuggestAccounts label="Following accounts" />
     </aside>
   );
 }

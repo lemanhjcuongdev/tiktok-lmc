@@ -1,0 +1,55 @@
+.wrapper {
+  border-top: 1px solid var(--minimum-dark-color);
+  padding: 10px 0px;
+}
+.label {
+  font-size: 1.4rem;
+  padding: 8px 18px;
+  font-weight: 600;
+}
+.acc-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 9px 18px;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+    background: rgba(22, 24, 35, 0.05);
+  }
+}
+.avatar {
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-left: 12px;
+  line-height: 1;
+  color: var(--primary-text-color);
+}
+.nickname {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.check-icon {
+  margin-left: 8px;
+  color: var(--first-vice-color);
+  font-size: 1.2rem;
+}
+.name {
+  font-size: 1.2rem;
+}
+.more-btn {
+  font-size: 1.4rem;
+  color: var(--dark-second-vice-color);
+  font-weight: 600;
+  padding: 8px 18px;
+  cursor: pointer;
+  user-select: none;
+}
