@@ -1,9 +1,11 @@
 .nav {
   margin-bottom: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--minimum-dark-color);
 }
 .menu-item {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   font-size: 1.8rem;
   font-weight: 700;
   padding: 10px 18px;

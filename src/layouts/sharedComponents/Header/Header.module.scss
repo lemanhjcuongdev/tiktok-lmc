@@ -1,46 +1,39 @@
 .wrapper {
-  // --first-vice-color: rgb(37 244 238);
-  // --second-vice-color: rgb(254 44 85);
-  // --search-border-color: rgb(200, 200, 200);
-  // --darkest-color: rgba(22, 24, 35, 1);
-  // --dark-color: rgba(22, 24, 35, 0.34);
+  --first-vice-color: rgb(37 244 238);
+  --second-vice-color: rgb(254 44 85);
+  --search-border-color: rgb(200, 200, 200);
+  --darkest-color: rgba(22, 24, 35, 1);
+  --dark-color: rgba(22, 24, 35, 0.34);
 
   --search-border-radius: 92px;
   --searchbar-height: 46px;
   --divider-top-space: 9px;
   --search-btn-width: 52px;
-
-  position: relative;
-  width: 100%;
-  top: 0;
-  left: 0;
 }
 .inner {
-  // display: flex;
-  // justify-content: space-around;
-  // flex-direction: column;
-  // height: 100%;
-  // width: 33%;
-  // background-color: black;
-  box-shadow: var(--dark-shadow-color);
+  position: relative;
   margin-bottom: 10px;
-  height: 100%;
-  width: 100%;
 }
 .section-one {
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .logo-link {
   display: flex;
+  img {
+    height: 44px;
+  }
 }
 .actions {
   width: 50%;
   display: flex;
   justify-content: space-around;
+  button {
+    margin-right: 10px;
+  }
 }
 .section-two {
   width: 100%;
@@ -86,7 +79,6 @@
   color: var(--vice-text-color);
   padding: 1px 6px;
   border-radius: 999px;
-  // margin-right: 10px;
 }
 
 .more-settings {

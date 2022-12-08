@@ -1,3 +1,7 @@
+.content-item {
+  display: flex;
+  // flex-direction: column;
+}
 .video {
-  height: 100vh;
+  max-height: 100vh;
 }

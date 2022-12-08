@@ -2,7 +2,7 @@
   --first-vice-color: rgb(37 244 238);
 }
 .wrapper {
-  width: 100%;
+  width: 400px;
   display: flex;
   align-items: center;
   padding: 9px 16px;
@@ -13,6 +13,7 @@
 }
 .avt {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }

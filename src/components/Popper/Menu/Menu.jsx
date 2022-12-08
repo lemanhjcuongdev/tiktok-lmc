@@ -33,7 +33,7 @@ function Menu({ children, data, onChange }) {
   };
   const handleBack = () => {
     setHistory((prev) => prev.slice(0, history.length - 1));
-  }
+  };
 
   const renderResults = (attrs) => (
     <div className={cx("setting-items")} tabIndex="-1" {...attrs}>
@@ -57,7 +57,8 @@ function Menu({ children, data, onChange }) {
       delay={[0, 200]}
       hideOnClick="false"
       // visible
-      placement="bottom-end"
+      placement="bottom-start"
+      offset={[-10, 20]}
       zIndex={1806}
       render={renderResults}
       onHide={handleResetTab}

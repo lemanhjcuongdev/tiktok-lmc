@@ -151,19 +151,10 @@ function Header() {
             )}
             <Menu data={isSignedIn ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
               {isSignedIn ? (
-                <Image
-                  src="none"
-                  className={cx("user-avt")}
-                  // altImg="https://f8.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ff8_icon.fa5f0478.png&w=1920&q=75"
-                />
+                <Image src="none" className={cx("user-avt")} />
               ) : (
                 <button className={cx("settings")}>
-                  {/* <FontAwesomeIcon icon={faEllipsisVertical} /> */}
-                  <Image
-                    src="none"
-                    className={cx("user-avt")}
-                    // altImg="https://f8.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ff8_icon.fa5f0478.png&w=1920&q=75"
-                  />
+                  <Image src="none" className={cx("user-avt")} />
                 </button>
               )}
             </Menu>
